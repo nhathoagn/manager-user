@@ -2,9 +2,9 @@ import React from "react";
 import TableDataRow from "../TabbleDataRow/TableDataRow";
 
 class TableData extends React.Component {
-    mappingData = () => this.props.data.map( (value,key) =>{
-		<TableDataRow stt={key} name={value.name} phonenumber={value.phonenumber} permission={value.permission} />
-    })
+    mappingData = () => (this.props.data.map( (value,key) =>(
+	    <TableDataRow stt={key} name={value.name} phonenumber={value.phonenumber} permission={value.permission} />
+    )))
 	render() {
 
 		return (
@@ -21,7 +21,7 @@ class TableData extends React.Component {
 
 						</thead>
 						<tbody>
-								{this.mappingData()}
+						{this.mappingData()}
 						</tbody>
 					</table>
 				</div>
