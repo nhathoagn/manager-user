@@ -9,7 +9,7 @@ class TableDataRow extends React.Component {
 		return (
 
 				<tr>
-					<td scope="row">{this.props.stt+1}</td>
+					<td scope="row" key={this.props.id}>{this.props.stt+1}</td>
 					<td>{this.props.name}</td>
 					<td>{this.props.phonenumber}</td>
 					<td>{this.permission()}</td>

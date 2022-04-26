@@ -6,9 +6,8 @@ class AddUser extends React.Component {
         showForm= () => {
 	        if (this.props.showForm === true){
 		        return(
+			        <div className="col">
 				        <div className="card mt-3">
-
-
 					        <div className="card-header ">Thêm Mới </div>
 					        <div className="card-body text-primary ">
 
@@ -30,17 +29,19 @@ class AddUser extends React.Component {
 						        </div>
 					        </div>
 				        </div>
-
+			        </div>
 		        )
 	        }
         }
 	render() {
 
 		return (
-			<div className="col-3 right">
 
-				{this.showForm()}
-			</div>
+				<div>
+					{this.showForm()}
+				</div>
+
+
 
 
 

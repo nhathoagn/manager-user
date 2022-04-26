@@ -12,7 +12,8 @@ class App extends  React.Component{
         super(props);
         this.state = {
             isShow: false,
-            data: DataUser
+            data: DataUser,
+            searchText: ""
         }
     }
     hideButton = () =>{
@@ -20,17 +21,30 @@ class App extends  React.Component{
             isShow: !this.state.isShow
         })
     }
-
+     getText = (text) =>{
+        this.setState({
+            searchText: text
+        })
+     }
    render() {
-
+       var result = [];
+       this.state.data.forEach( (item) =>{
+           if (item.name.indexOf(this.state.searchText) !== -1){
+               result.push(item)
+           }
+       })
+      // let result =  this.state.data.filter( (item) =>
+      //      item.name ===  this.state.searchText
+      //  )
+       console.log(result)
        return (
            <div className="App">
                <Header/>
                <div className="searchForm">
                    <div className="container">
                        <div className="row">
-                           <Search hideButton={ () => this.hideButton()}  state={this.state.isShow}/>
-                           <TableData data={this.state.data}/>
+                           <Search hideButton={ () => this.hideButton()}  state={this.state.isShow} gettext={ (text) => this.getText(text)}/>
+                           <TableData data={result}/>
                            <AddUser showForm={this.state.isShow}/>
                        </div>
                    </div>
