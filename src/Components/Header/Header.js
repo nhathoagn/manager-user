@@ -3,7 +3,7 @@ import React from "react";
 class Header extends React.Component {
 	render() {
 		return (
-			<div>
+
 				<div className="jumbotron jumbotron-fluid">
 					<div className="container text-center">
 						<h1 className="display-3">Project quản lý thành viên bằng ReactJS</h1>
@@ -11,7 +11,7 @@ class Header extends React.Component {
 						<hr className="my-2" />
 					</div>
 				</div>
-			</div>
+
 		);
 	}
 }

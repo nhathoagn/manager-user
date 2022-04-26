@@ -1,15 +1,42 @@
 import logo from './logo.svg';
 import './App.css';
+import React from "react";
 import Header from "./Components/Header/Header";
-function App() {
-  return (
-    <div className="App">
-      <Header/>
-        <div className="searchForm">
+import Search from "./Components/Search/Search";
+import AddUser from "./Components/AddUser/AddUser";
+import TableData from "./Components/TableData/TableData";
+import {useState} from "react";
+class App extends  React.Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+            isShow: false
+        }
+    }
+    hideButton = () =>{
+        this.setState({
+            isShow: !this.state.isShow
+        })
+    }
 
-        </div>
-    </div>
-  );
+   render() {
+
+       return (
+           <div className="App">
+               <Header/>
+               <div className="searchForm">
+                   <div className="container">
+                       <div className="row">
+                           <Search hideButton={ () => this.hideButton()}  state={this.state.isShow}/>
+                           <TableData/>
+                           <AddUser showForm={this.state.isShow}/>
+                       </div>
+                   </div>
+               </div>
+           </div>
+       );
+   }
+
 }
 
 export default App;

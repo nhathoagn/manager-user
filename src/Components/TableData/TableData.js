@@ -1,11 +1,11 @@
 import React from "react";
 
 class TableData extends React.Component {
+
 	render() {
 		return (
-			<div>
+
 				<div className="col-9">
-					.
 					<table className="table table-striped  table-hover">
 						<thead className="thead-inverse">
 						<tr>
@@ -101,7 +101,7 @@ class TableData extends React.Component {
 				</div>
 
 
-			</div>
+
 		);
 	}
 }

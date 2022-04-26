@@ -1,31 +1,11 @@
 import React from "react";
 
 class AddUser extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			isShow : false
-		}
-	}
-	showButton = () =>{
-		if (this.state.isShow === true){
-			return 	<div className="btn btn-block btn-outline-secondary" onClick={ () => this.hideButton()}>Đóng lại</div>
-		}else {
-			return <div className="btn btn-block btn-outline-info" onClick={ () => this.hideButton()}>Thêm Mới</div>
-		}
-	}
-	hideButton = () =>{
-		this.setState({
-			isShow: !this.state.isShow
-		});
-	}
+
+
         showForm= () => {
-	        if (this.state.isShow === true){
+	        if (this.props.showForm === true){
 		        return(
-
-
-
-
 				        <div className="card mt-3">
 
 
@@ -58,7 +38,7 @@ class AddUser extends React.Component {
 
 		return (
 			<div className="col-3 right">
-				{this.showButton()}
+
 				{this.showForm()}
 			</div>
 
