@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "name": "Nguyen Nhat Hoang",
+    "phone_number": "0889554225",
+    "Permission": 1
+
+  },
+  {
+    "id": 2,
+    "name": "Hoang Anh Truong",
+    "phone_number": "0123456789",
+    "Permission": 2
+
+  },{
+  "id": 3,
+  "name": "Tran Duong Quang",
+  "phone_number": "08826465655",
+  "Permission": 3
+
+},{
+  "id": 4,
+  "name": "Nguyen Van Cong",
+  "phone_number": "0889664225",
+  "Permission": 1
+
+}
+]

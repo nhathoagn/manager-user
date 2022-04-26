@@ -6,11 +6,13 @@ import Search from "./Components/Search/Search";
 import AddUser from "./Components/AddUser/AddUser";
 import TableData from "./Components/TableData/TableData";
 import {useState} from "react";
+import  DataUser from "./db.json"
 class App extends  React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            isShow: false
+            isShow: false,
+            data: DataUser
         }
     }
     hideButton = () =>{
@@ -28,7 +30,7 @@ class App extends  React.Component{
                    <div className="container">
                        <div className="row">
                            <Search hideButton={ () => this.hideButton()}  state={this.state.isShow}/>
-                           <TableData/>
+                           <TableData data={this.state.data}/>
                            <AddUser showForm={this.state.isShow}/>
                        </div>
                    </div>

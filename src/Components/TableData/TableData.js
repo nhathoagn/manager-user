@@ -1,8 +1,12 @@
 import React from "react";
+import TableDataRow from "../TabbleDataRow/TableDataRow";
 
 class TableData extends React.Component {
-
+    mappingData = () => this.props.data.map( (value,key) =>{
+		<TableDataRow stt={key} name={value.name} phonenumber={value.phonenumber} permission={value.permission} />
+    })
 	render() {
+
 		return (
 
 				<div className="col-9">
@@ -14,88 +18,10 @@ class TableData extends React.Component {
 							<th>Số Điện Thoại</th>
 							<th>Thao tác</th>
 						</tr>
+
 						</thead>
 						<tbody>
-						<tr>
-							<td scope="row">1</td>
-							<td>Nguyễn Nhật Hoàng</td>
-							<td>0889554225</td>
-							<td>Admin</td>
-							<td>
-								<div className="btn-group">
-									<div className="btn btn-warning sua">
-										<i className="fa fa-edit  ">Sửa</i>
-									</div>
-									<div className="btn btn-danger xoa">
-										<i className="fa fa-delete   ">Xoá</i>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td scope="row">2</td>
-							<td>Nguyễn Nhật Hoàng</td>
-							<td>0889554225</td>
-							<td>Admin</td>
-							<td>
-								<div className="btn-group">
-									<div className="btn btn-warning sua">
-										<i className="fa fa-edit  ">Sửa</i>
-									</div>
-									<div className="btn btn-danger xoa">
-										<i className="fa fa-delete   ">Xoá</i>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td scope="row">3</td>
-							<td>Nguyễn Nhật Hoàng</td>
-							<td>0889554225</td>
-							<td>Admin</td>
-							<td>
-								<div className="btn-group">
-									<div className="btn btn-warning sua">
-										<i className="fa fa-edit  ">Sửa</i>
-									</div>
-									<div className="btn btn-danger xoa">
-										<i className="fa fa-delete   ">Xoá</i>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td scope="row">4</td>
-							<td>Nguyễn Nhật Hoàng</td>
-							<td>0889554225</td>
-							<td>Admin</td>
-							<td>
-								<div className="btn-group">
-									<div className="btn btn-warning sua">
-										<i className="fa fa-edit  ">Sửa</i>
-									</div>
-									<div className="btn btn-danger xoa">
-										<i className="fa fa-delete   ">Xoá</i>
-									</div>
-								</div>
-							</td>
-						</tr>
-						<tr>
-							<td scope="row">5</td>
-							<td>Nguyễn Nhật Hoàng</td>
-							<td>0889554225</td>
-							<td>Admin</td>
-							<td>
-								<div className="btn-group">
-									<div className="btn btn-warning sua">
-										<i className="fa fa-edit  ">Sửa</i>
-									</div>
-									<div className="btn btn-danger xoa">
-										<i className="fa fa-delete   ">Xoá</i>
-									</div>
-								</div>
-							</td>
-						</tr>
+								{this.mappingData()}
 						</tbody>
 					</table>
 				</div>
