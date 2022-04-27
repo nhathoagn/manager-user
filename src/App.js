@@ -33,7 +33,7 @@ class App extends  React.Component{
                result.push(item)
            }
        })
-      // let result =  this.state.data.filter( (item) =>
+      // let result =  this.state.data.filter( (item) =>º
       //      item.name ===  this.state.searchText
       //  )
        console.log(result)
